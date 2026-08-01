@@ -1,13 +1,17 @@
 import Vue from 'vue'
+
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-Vue.use(ElementUI)
+Vue.use(ElementUI) // 使用elementUI
 Vue.config.productionTip = false
 
 import VueRouter from 'vue-router'
-Vue.use(VueRouter)
+Vue.use(VueRouter) // 使用路由
 
-import App from './App.vue'
+import less from 'less'
+Vue.use(less) // 使用less
+
+import App from './baseApp/index.vue'
 import routerConfig from './router'
 new Vue({
   router: new VueRouter(routerConfig),
